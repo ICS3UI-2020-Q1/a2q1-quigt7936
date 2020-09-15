@@ -1,15 +1,26 @@
+import java.util.Scanner;
 /**
- *
- * @author 
+ * Tells the user if their number is odd or even
+ * @author Thomas Quigley
  */
 public class Main {
 
-  /**
-   * The method that is executed when you hit the run button.
-   * @param args the command line arguments
-   */
+
   public static void main(String[] args) {
-    // TODO code application logic here
+    Scanner input = new Scanner(System.in);
+    
+    // gets the users number
+    System.out.println("Please enter an integer:");
+    int userInt = input.nextInt();
+
+    // figures out if it even or odd and tells the user
+    int remainder = userInt % 2;
+    if (remainder == 1 || remainder == -1) {
+      System.out.println(userInt + " is an odd number");
+    } else {
+      System.out.println(userInt + " is an even number");
+    }
+    
     
   }
 }
